@@ -1,0 +1,37 @@
+image_size: 64
+image_channel: 3
+stack_size: 1
+sequential: False
+noise_scale: 0.5
+grid_size: 0.5
+time_scale: 1
+timelimit: 200
+nav_path: "/home/henry/Desktop/dataset/rl_envs/unity-envs/linux_v2.1/cog_sim2real_env.x86_64"
+con_path: "/home/henry/Desktop/dataset/rl_envs/unity-envs/linux_confrontation_v2/cog_confrontation_env.x86_64"
+kernels: [8,6,6,4]
+strides: [4,2,2,2]
+filters: [64,64,128,256]
+
+actor_hidden_size: [128,]
+critic_hidden_size: [128,]
+
+training_steps: 1000000
+nsteps: 256
+nepoch: 2
+nminibatch: 4
+learning_rate: 0.0005
+
+vf_coef: 0.25
+ent_coef: 0.0
+clip_range: 0.15
+gamma: 0.99
+lam: 0.95
+
+use_obsnorm: False
+use_rewnorm: True
+obsnorm_range: 5
+rewnorm_range: 5
+
+device: "cuda:0"
+logdir: "./logs/ppoclip/CoG-Navigation-Worker/"
+modeldir: "./models/ppoclip/CoG-Navigation-Worker/"

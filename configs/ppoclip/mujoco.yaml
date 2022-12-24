@@ -1,0 +1,28 @@
+agent: "PPO_Clip"
+env_id: "HalfCheetah-v3"
+representation: "Basic_MLP"
+policy: "Gaussian_AC"
+
+representation_hidden_size: [128,]
+actor_hidden_size: [128,]
+critic_hidden_size: [128,]
+
+training_steps: 250000
+nsteps: 256
+nepoch: 6
+nminibatch: 4 
+learning_rate: 0.0007
+
+vf_coef: 0.25
+ent_coef: 0.0
+clip_range: 0.25
+gamma: 0.98
+lam: 0.95
+
+use_obsnorm: True
+use_rewnorm: True
+obsnorm_range: 5
+rewnorm_range: 5
+
+logdir: "./logs/ppoclip"
+modeldir: "./models/ppoclip"

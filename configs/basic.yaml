@@ -1,0 +1,14 @@
+dl_toolbox: "torch"  # The deep learning toolbox. Values: "torch", "mindspore", "tensorlayer"
+
+agent: "DQN"  # The deep reinforcement learning agent
+runner: "DRL"  # Values: "DRL", "MARL", "Mean_Field_MARL"
+
+parallels: 4
+seed: 2910
+vectorize: "Dummy"  # "Dummy" for DRL, "Dummy_MAS" for MARL
+train_at_step: False  # True: train once after a step; False: train after an episode.
+render: False
+render_delay: 0.00  # s
+test_mode: False
+
+device: 'cpu' #  torch: "cuda:0", "cpu"; Mindspore: ['CPU', 'GPU', 'Ascend', 'Davinci']
